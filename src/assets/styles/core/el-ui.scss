@@ -1,0 +1,54 @@
+// 优化 Element Plus 组件库默认样式
+
+:root {
+  // 系统主色
+  --main-color: var(--el-color-primary);
+}
+
+.el-checkbox-group {
+  &.el-table-filter__checkbox-group label.el-checkbox {
+    height: 17px !important;
+
+    .el-checkbox__label {
+      font-weight: 400 !important;
+    }
+  }
+}
+
+.el-checkbox {
+  .el-checkbox__inner {
+    border-radius: 2px !important;
+  }
+}
+
+// 优化复选框样式
+.el-checkbox--default {
+  .el-checkbox__inner {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 4px !important;
+
+    &::before {
+      content: '';
+      height: 4px !important;
+      top: 5px !important;
+      background-color: #fff !important;
+      transform: scale(0.6) !important;
+    }
+  }
+
+  .is-checked {
+    .el-checkbox__inner {
+      &::after {
+        width: 3px;
+        height: 8px;
+        margin: auto;
+        border: 2px solid var(--el-checkbox-checked-icon-color);
+        border-left: 0;
+        border-top: 0;
+        transform: translate(-45%, -60%) rotate(45deg) scale(0.86) !important;
+        transform-origin: center;
+      }
+    }
+  }
+}

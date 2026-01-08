@@ -1,0 +1,15 @@
+@use '@styles/core/mixin.scss' as *;
+
+// 通用选中样式
+@mixin menu-active($color, $bg-color, $icon-color: var(--theme-color)) {
+  .el-menu-item.is-active {
+    color: $color !important;
+    background-color: $bg-color;
+
+    .menu-icon {
+      .art-svg-icon {
+        color: $icon-color !important;
+      }
+    }
+  }
+}
