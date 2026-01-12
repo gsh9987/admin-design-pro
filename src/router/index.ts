@@ -13,7 +13,7 @@ export const router = createRouter({
 export function initRouter(app: App<Element>): void {
   setupBeforeEachGuard(router) // 路由前置守卫
   app.use(router)
-  // console.log('🚀 ~ index.ts:16 ~ initRouter ~ router:', router.options)
+  console.log('🚀 ~ index.ts:16 ~ initRouter ~ router:', router.options)
 }
 
 // 主页路径，默认使用菜单第一个有效路径，配置后使用此路径
